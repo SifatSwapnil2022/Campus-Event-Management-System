@@ -1,0 +1,81 @@
+create or replace TRIGGER "USER_TYPE_TRIGGER"
+AFTER INSERT ON App_User
+FOR EACH ROW
+DECLARE
+    v_new_id NUMBER;
+BEGIN
+    IF :NEW.u_type= 'Admin' THEN
+     SELECT "ADMIN_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "ADMIN" (
+            "ADMIN_ID", "A_u_name", "A_USER_FULLNAME", "mail", "img", 
+            "mobile", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "ADMIN_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Student' THEN
+    SELECT "STUDENT_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "STUDENT" (
+            "STUDENT_ID", "S_u_name", "S_USER_FULLNAME", "mail", "img", 
+            "mobile", "dept", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "STUDENT_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.dept, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Club' THEN
+    SELECT "CLUB_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "CLUB" (
+            "CLUB_ID", "C_u_name", "C_USER_FULLNAME", "mail", "img", 
+            "mobile", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "CLUB_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'dept' THEN
+    SELECT "dept_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "dept" (
+            "dept_ID", "D_u_name", "D_USER_FULLNAME", "mail", "img", 
+            "mobile", "dept", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "DEPT_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.dept, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Faculty' THEN
+    SELECT "FACULTY_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "FACULTY" (
+            "FACULTY_ID", "F_u_name", "F_USER_FULLNAME", "mail", "img", 
+            "mobile", "dept", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "FACULTY_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.dept, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Guest' THEN
+    SELECT "GUEST_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "GUEST" (
+            "GUEST_ID", "G_u_name", "G_USER_FULLNAME", "mail", "img", 
+            "mobile", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "GUEST_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Logistrics' THEN
+    SELECT "LOGISTRIC_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "LOGISTRICS" (
+            "LOGISTRICS_ID", "L_u_name", "L_USER_FULLNAME", "mail", "img", 
+            "mobile", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "LOGISTRICS_u_id"
+        ) VALUES (
+            v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    ELSIF :NEW.u_type= 'Sponsor' THEN
+    SELECT "SPONSOR_ID_SEQ".NEXTVAL INTO v_new_id FROM dual;
+        INSERT INTO "SPONSOR" (
+            "SPONSOR_ID", "SP_u_name", "SP_USER_FULLNAME", "mail", "img", 
+            "mobile", "USER_TYPE", "IS_ACTIVE", "pfrnc", "PASSWORD", "SPONSOR_u_id"
+        ) VALUES (
+           v_new_id, :NEW.u_name, :NEW.USER_FULLNAME, :NEW.mail, :NEW.img, 
+            :NEW.mobile, :NEW.USER_TYPE, :NEW.IS_ACTIVE, :NEW.pfrnc, :NEW.PASSWORD, :NEW.u_id
+        );
+    END IF;
+END;
+/

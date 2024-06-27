@@ -1,8 +1,11 @@
 # Campus-Event-Management-System
 Hi , this is our CSE302 (Database System) project .Through this project we show users role(Admin,Faculty,Students,Guests,Sponsors,Logistics) ,Dashboard,Grap and Chart , Interactive report and form,Master table,Trigger ,Parameterized Report and others feature like(HTML ,CSS),Authorization and User Role Assignment ,E-R Model of the Project.
 URL : https://apex.oracle.com/pls/apex/r/tanvir_mridha17540042/cems/
+
 Sample screenshots :
+
 Log in page :
+
 ![Screenshot (395)](https://github.com/SifatSwapnil2022/Campus-Event-Management-System/assets/103960510/c9e1847c-1b2e-4bd5-a8c5-4dc626ddcd90)
 
 Home menu :

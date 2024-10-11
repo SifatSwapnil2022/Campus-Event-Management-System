@@ -43,9 +43,13 @@ E-R Model:
 
 Entity-Relationship model outlining the data structure and relationships within the database.
 Access Information
-URL: Project Link
+
+
+URL: https://apex.oracle.com/pls/apex/r/tanvir_mridha17540042/cems/
 Username: tanvir
 Password: 1234
+
+
 Conclusion
 This project serves as a comprehensive demonstration of database system functionalities, focusing on user roles, data visualization, and interactive reporting. It provides a practical application of database concepts and technologies, facilitating a better understanding of database management systems.
 Sample screenshots :

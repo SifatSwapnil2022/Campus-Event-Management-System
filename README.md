@@ -1,8 +1,53 @@
 # Campus-Event-Management-System
-Hi , this is our CSE302 (Database System) project .Through this project we show users role(Admin,Faculty,Students,Guests,Sponsors,Logistics) ,Dashboard,Graph and Chart , Interactive report and form,Master table,Trigger ,Parameterized Report and others feature like(HTML ,CSS),Authorization and User Role Assignment ,E-R Model of the Project.
-URL : https://apex.oracle.com/pls/apex/r/tanvir_mridha17540042/cems/
-user: tanvir
-password:1234
+Project Overview: CSE302 Database System
+Objective:
+This project demonstrates various database system features through a web application, showcasing user roles and interactive functionalities.
+
+Key Features
+User Roles:
+
+Admin: Manages the overall system, user roles, and permissions.
+Faculty: Access to academic resources and reporting tools.
+Students: Can view courses, assignments, and grades.
+Guests: Limited access for non-registered users.
+Sponsors: Manage sponsorships and contributions.
+Logistics: Handle logistical aspects of events and resources.
+Dashboard:
+
+Provides an overview of system activities and user statistics.
+Graphs and Charts:
+
+Visual representations of data for easier analysis and decision-making.
+Interactive Reports:
+
+Dynamic reports that can be filtered and customized by users.
+Forms:
+
+User-friendly forms for data entry and submission.
+Master Table:
+
+Centralized table for managing core data entities.
+Triggers:
+
+Automated responses to specific database events (e.g., updates or inserts).
+Parameterized Reports:
+
+Reports that allow users to input parameters for customized output.
+Web Technologies:
+
+Utilizes HTML and CSS for front-end design.
+Authorization and User Role Assignment:
+
+Secure login system to manage access based on user roles.
+E-R Model:
+
+Entity-Relationship model outlining the data structure and relationships within the database.
+Access Information
+URL: Project Link
+Username: tanvir
+Password: 1234
+Conclusion
+This project serves as a comprehensive demonstration of database system functionalities, focusing on user roles, data visualization, and interactive reporting. It provides a practical application of database concepts and technologies, facilitating a better understanding of database management systems.
 Sample screenshots :
 
 Log in page :
